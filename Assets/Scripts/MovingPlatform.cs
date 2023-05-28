@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -42,6 +43,14 @@ public class MovingPlatform : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     /*private void OnCollisionEnter2D(Collision2D collision)

@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
+
     [Header("Movement")]
     private float speed;
     public float walkSpeed;
