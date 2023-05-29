@@ -26,7 +26,7 @@ public class MenuButton : MonoBehaviour
                 animator.SetBool("pressed", true);
                 if (thisIndex == 0)
                 {
-                    SceneManager.LoadScene("SampleScene");
+                    SceneManager.LoadScene("ClubTest");
                 }
                 else if (thisIndex == 1)
                 {
